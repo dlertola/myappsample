@@ -1,0 +1,45 @@
+new-item -itemtype file index.html
+new-item -itemtype file app.js
+git init //makes local repository
+git config --global user.name 'David Lertola'
+git config --global user.email 'dlertola@gmail.com'
+git add index.html //adds file to prepare to commit
+git status
+git rm --cached index.html
+git status
+git add *.html
+git status
+git rm --cached index.html
+git add .
+git status
+git commit //puts added files into local repository
+git commit -m 'Changed app.js'
+new-item -itemtype file .gitignore
+new-item -itemtype file log.text
+mkdir dir1
+mkdir dir2
+--help
+clear
+new-item -itemtype file dir1\app1.js
+new-item -itemtype file dir2\app2.js
+git status
+git add .
+git branch login //creates new branch 'login'
+git commit -m 'Another change'
+git checkout login //goes to that branch
+new-item -itemtype file login.html
+git add .
+git status
+git commit -m 'login form'
+git checkout master //login.html will no longer be in repository, since it was created in login branch
+git merge login //login branch now becomes master
+git remote
+git remote add origin https://github.com/dlertola/myappsample.git //github repository
+git push -u origin master //pushed master branch into remote repository
+new-item -itemtype file README.md
+git status
+git add .
+git commit -m 'Added README'
+git remote
+git push
+git pull
