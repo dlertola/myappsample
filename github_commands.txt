@@ -39,7 +39,7 @@ git push -u origin master //pushed master branch into remote repository
 new-item -itemtype file README.md
 git status
 git add .
-git commit -m 'Added README'
+git commit -m 'Added README' //adds to local repository, not to remote one
 git remote
-git push
+git push //pushes local repository updates to remote repository
 git pull
